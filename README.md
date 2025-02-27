@@ -32,7 +32,7 @@ cd WHAC
 bash scripts/installation.sh
 ```
 #### **Download the pretrained model for WHAC**
-- Download the `whac_motion_velocimeter.pth.tar` from [here](https://drive.google.com/file/d/1FoDZlElyWLhDNNJhmGfpypvpD3BOR7na/view?usp=sharing) and place it under `./pretrained_models`.
+- Download the `whac_motion_velocimeter.pth.tar` from [here](https://huggingface.co/waanqii/WHAC/tree/main) and place it under `./pretrained_models`.
 #### **Setup [SMPLest-X](https://github.com/wqyin/SMPLest-X)**
 - Prepare the pretrained models and parametric human models for SMPLest-X following the official instructions [here](https://github.com/wqyin/SMPLest-X?tab=readme-ov-file#preparation). 
 - Make sure the file structure under `./third_party/SMPLest-X` is correct.
