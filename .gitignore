@@ -1,7 +1,6 @@
 pretrained_models
 demo
 outputs
-*.txt
 *.txt.1
 *.pyc
 **/__pycache__
