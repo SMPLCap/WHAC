@@ -239,9 +239,13 @@ def main():
     # use the full video average scale rather than per time step
     mesh_seq = torch.stack(mesh_seq)
     whac_scale = process_whac_scale(whac_scale)
-    # transform mesh to world accorcing to sacaled extrinsics
+    # transform mesh to world according to scaled extrinsics
     world_mesh, extrinsics_rot_mat = \
             cam_mesh_to_world_mesh(bbox_frame_id, mesh_seq, extrinsics_rot_mat, whac_scale)
+
+    # Save whac_scale for Blender import
+    joblib.dump({'whac_scale': float(whac_scale)}, osp.join(output_folder, 'whac_scale.pth'))
+
     print("SMPLest-X and WHAC...Done")
 
     # =============visualization=============

@@ -29,7 +29,7 @@ This is the official implementation of [**WHAC: World-grounded Humans and Camera
 git clone https://github.com/wqyin/WHAC.git --recursive
 cd WHAC
 
-bash scripts/installation.sh
+bash scripts/install.sh
 ```
 #### **Download the pretrained model for WHAC**
 - Download the `whac_motion_velocimeter.pth.tar` from [here](https://huggingface.co/waanqii/WHAC/tree/main) and place it under `./pretrained_models`.
@@ -79,6 +79,29 @@ bash scripts/prepare_demo.sh
 bash scripts/inference.sh dance_demo.mp4
 bash scripts/inference.sh skateboard_demo.mp4
 ```
+
+## Blender Import
+
+Import WHAC results (SMPL-X mesh sequence and camera trajectory) into Blender for visualization and rendering.
+
+**1. Generate mesh files during inference:**
+```bash
+python whac/inference.py --seq_name your_video.mp4 --save_mesh
+```
+
+**2. Import to Blender:**
+
+Open Blender (3.0+), switch to the **Scripting** workspace, open `whac/import_to_blender.py`, press **Alt+P** to load the script, then run in the Python Console:
+```python
+main(output_folder="/path/to/WHAC/demo/your_video")
+```
+
+For long sequences, use `frame_skip` to import every Nth frame:
+```python
+main(output_folder="/path/to/demo/your_video", frame_skip=2)
+```
+
+The script imports the animated SMPL-X mesh (using shape keys) and camera trajectory. Press **Spacebar** to play the animation and **Numpad 0** to view through the camera.
 
 ## WHAC-A-Mole
 Check out our [homepage](https://wqyin.github.io/projects/WHAC/) for dataset download links.
