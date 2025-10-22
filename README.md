@@ -37,7 +37,7 @@ bash scripts/install.sh
 - Prepare the pretrained models and parametric human models for SMPLest-X following the official instructions [here](https://github.com/wqyin/SMPLest-X?tab=readme-ov-file#preparation). 
 - Make sure the file structure under `./third_party/SMPLest-X` is correct.
 #### **Setup [DPVO](https://github.com/princeton-vl/DPVO)**
-- Setup steps for DPVO are included in `./scripts/installation.sh`. 
+- Setup steps for DPVO are included in `./scripts/install.sh`. 
 - Refer to the [Setup and Installation](https://github.com/princeton-vl/DPVO?tab=readme-ov-file#setup-and-installation) section if there is any issue during the installation.
 
 #### **File structure**
@@ -131,7 +131,7 @@ https://github.com/wqyin/WHAC/assets/37542645/339e1447-6211-4a4f-8ba4-957c028bd2
 
 ## Explore More [SMPLCap](https://github.com/SMPLCap) Projects
 
-- [arXiv'25] [SMPLest-X](https://github.com/SMPLCap/SMPLest-X): An extended version of [SMPLer-X](https://github.com/SMPLCap/SMPLer-X) with stronger foundation models.
+- [T-PAMI] [SMPLest-X](https://github.com/SMPLCap/SMPLest-X): An extended version of [SMPLer-X](https://github.com/SMPLCap/SMPLer-X) with stronger foundation models.
 - [ECCV'24] [WHAC](https://github.com/SMPLCap/WHAC): World-grounded human pose and camera estimation from monocular videos.
 - [CVPR'24] [AiOS](https://github.com/SMPLCap/AiOS): An all-in-one-stage pipeline combining detection and 3D human reconstruction. 
 - [NeurIPS'23] [SMPLer-X](https://github.com/SMPLCap/SMPLer-X): Scaling up EHPS towards a family of generalist foundation models.
